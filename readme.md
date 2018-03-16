@@ -1,31 +1,27 @@
 ![Readme Art](https://raw.githubusercontent.com/codecasts/ambientum/master/new-readme-art.png)
 
-# Ambientum
+# Ambientum for Wordpress
 
-Keeping it uniform between development, staging and production environments is often something not easy.
-On the last years, our buddy Docker has become more and more mature and now it's becoming the standard.
-
-We all love Laravel and Vue.JS, but why develop a Rock Star code with a Kick-Ass framework
-without a awesome environment?
+This is a fork from Ambientum to adapt the environment slightly for Wordpress development. Some of the differences are the inclusion of Wordpress specific tools and optimizations.
 
 No more "it worked on my machine"!
 
 ## What is does?
-Ambientum can help you doing some amazing things, the 3 main scenarios are listed above:
+Ambientum for Wordpress can help you doing some amazing things, the 3 main scenarios are listed above:
 
-- **Run Laravel and/or Vue.JS in Development.**
-- **Run Laravel and/or Vue.JS in Production (Continuous Integration included).**
-- **Replace local dependencies with Docker commands.**
+- **Run WordPress in Development.**
+- **Run WordPress in Production (Continuous Integration included).** // TODO
+- **Replace local dependencies with Docker commands.** // TODO
 
 ## What do I need to know before getting started?
 
-Before staging with Ambientum, a few pieces of knowledge must be in place:
+Before staging with Ambientum for Wordpress, a few pieces of knowledge must be in place:
 
 #### For replacing local commands:
 - The basics of Docker and Containers.
 - Being comfortable around the command line.
 
-#### For running a development Laravel or Vue.JS environment:
+#### For running a development Wordpress environment:
 - Know how to operate `docker-compose`.
 
 
@@ -34,7 +30,7 @@ Docker compose shipped with Docker is usually very old.
 Please have the latest version installed from Github at https://github.com/docker/compose/releases.
 
 ## Images
-If you are already comfortable with the tools and have played around Ambientum, here are the set of images available for usage,
+If you are already comfortable with the tools and have played around Ambientum for Wordpress, here are the set of images available for usage,
 so you can start building your environment with the tools that you may want.
 
 > PHP 7.2 is available but yet without xDebug support, considering this, it will not receive the latest tag until xDebug stable is compatible with PHP 7.2
