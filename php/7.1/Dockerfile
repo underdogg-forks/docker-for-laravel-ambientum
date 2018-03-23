@@ -5,15 +5,15 @@
 # Image:         CLI/Base
 # Version:       7.1.x
 # Strategy:      PHP From PHP-Alpine Repository (CODECASTS) (https://php-alpine.codecasts.rocks)
-# Base distro:   Alpine 3.6
+# Base distro:   Alpine 3.7
 #
-FROM alpine:3.6
+FROM alpine:3.7
 
 # Repository/Image Maintainer
-MAINTAINER Diego Hernandes <diego@hernandev.com>
+MAINTAINER Arman Shahinyan <arman.shahinyan@webbingapps.com>
 
 # Variables for enabling NewRelic
-ENV FRAMEWORK=laravel \
+ENV FRAMEWORK=wordpress \
     XDEBUG_ENABLED=false \
     NR_ENABLED=false \
     NR_APP_NAME="" \
@@ -30,7 +30,7 @@ ADD bashrc /home/ambientum/.bashrc
 RUN echo "---> Enabling PHP-Alpine" && \
     apk add --update wget && \
     wget -O /etc/apk/keys/php-alpine.rsa.pub http://php.codecasts.rocks/php-alpine.rsa.pub && \
-    echo "@php http://php.codecasts.rocks/v3.6/php-7.1" >> /etc/apk/repositories && \
+    echo "@php http://php.codecasts.rocks/v3.7/php-7.1" >> /etc/apk/repositories && \
     apk add --update \
     curl \
     bash \
@@ -88,6 +88,8 @@ RUN echo "---> Enabling PHP-Alpine" && \
     sudo ln -s /usr/bin/php7 /usr/bin/php && \
     echo "---> Installing Composer" && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    echo "---> Installing WP-CLI" && \
+    curl -sS https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar > /usr/local/bin/wp && chmod +x /usr/local/bin/wp && \
     echo "---> Cleaning up" && \
     rm -rf /tmp/* && \
     echo "---> Adding the ambientum user" && \
