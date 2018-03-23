@@ -57,7 +57,7 @@ services:
       # 1025: this port is used for SMTP, You will not need to uncommed this here, unless you have a very
       #       specific use case.
       # - 1025:1025
-      # 8025: this port is used for the web interface on mailhog. 
+      # 8025: this port is used for the web interface on mailhog.
       #       It's just like a email client. that will list all emails you've sent.
       - 8025:8025
 
@@ -106,4 +106,4 @@ services:
     ports:
       - 6379:6379
 
- 
+

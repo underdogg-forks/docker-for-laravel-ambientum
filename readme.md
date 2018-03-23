@@ -31,7 +31,7 @@ Please have the latest version installed from Github at https://github.com/docke
 
 ## Images
 If you are already comfortable with the tools and have played around Ambientum for Wordpress, here are the set of images available for usage,
-so you can start building your environment with the tools that you may want.
+so you can start building your environment with the tools that you may want. // TODO
 
 > PHP 7.2 is available but yet without xDebug support, considering this, it will not receive the latest tag until xDebug stable is compatible with PHP 7.2
 
@@ -194,33 +194,4 @@ services:
     links:
       - mysql
       - cache
-```
-
-### Vue.js docker-compose.yml
-Developing with Vue.js? We got you covered! Here is the docker-compose file:
-
-```yml
-version: '2'
-
-services:
-  # Web server - For live reload and development
-  # This environment can be used to run npm and node
-  # commands as well
-  dev:
-    image: ambientum/node:9
-    container_name: sandbox-vue-dev
-    command: npm run dev
-    volumes:
-      - .:/var/www/app
-    ports:
-      - 8080:8080
-
-  # Testing dist on a "real" webserver
-  production-server:
-    image: nginx:stable-alpine
-    container_name: sandbox-preview-server
-    volumes:
-      - ./dist:/usr/share/nginx/html
-    ports:
-      - 9090:80
 ```
