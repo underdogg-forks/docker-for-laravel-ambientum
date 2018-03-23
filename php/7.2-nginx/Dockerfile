@@ -9,7 +9,7 @@
 #
 # Inspired by official PHP images.
 #
-FROM ambientum/php:7.2
+FROM texeltexel2009/php:7.2
 
 # Repository/Image Maintainer
 MAINTAINER Diego Hernandes <diego@hernandev.com>
