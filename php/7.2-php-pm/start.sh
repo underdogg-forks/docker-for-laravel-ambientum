@@ -6,6 +6,6 @@
  --host=0.0.0.0 \
  --bootstrap=$FRAMEWORK \
  --cgi-path=/usr/bin/php-cgi7 \
- --static-directory=/var/www/app/public \
+ --static-directory=/var/www/app \
  --debug=1 \
  /var/www/app
