@@ -1,4 +1,4 @@
-![Readme Art](https://raw.githubusercontent.com/codecasts/ambientum/master/ambientum-for-wordpress-cover.png)
+![Readme Art](https://raw.githubusercontent.com/texeltexel2009/ambientum-for-wordpress/master/ambientum-for-wordpress-cover.png)
 
 # Ambientum for Wordpress
 
