@@ -13,7 +13,7 @@ FROM alpine:3.7
 MAINTAINER Arman Shahinyan <arman.shahinyan@webbingapps.com>
 
 # Variables for enabling NewRelic
-ENV FRAMEWORK=wordpress \
+ENV FRAMEWORK=laravel \
     XDEBUG_ENABLED=false \
     NR_ENABLED=false \
     NR_APP_NAME="" \
